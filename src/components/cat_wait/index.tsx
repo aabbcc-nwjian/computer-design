@@ -29,7 +29,6 @@ const CatCardWait: React.FC<CatCardProps> = ({
   statusType,
   personalityTags,
   description,
-  onViewDetails,
 }) => {
   const getStatusInfo = () => {
     switch (statusType) {

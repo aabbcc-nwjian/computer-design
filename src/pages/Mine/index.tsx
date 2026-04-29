@@ -1,85 +1,77 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./index.scss";
 import mineicon1 from "../../assets/icon/mineicon1.svg";
 import mineicon2 from "../../assets/icon/mineicon2.svg";
 import mineicon3 from "../../assets/icon/mineicon3.svg";
 import mineicon4 from "../../assets/icon/mineicon4.svg";
 
+interface Task {
+  id: number;
+  title: string;
+  description?: string;
+  status: string;
+  createdAt?: string;
+  type?: string;
+  deadline?: string;
+}
+interface Adoption {
+  id: number;
+  name: string;
+  date?: string;
+  status: "pending" | "approved" | "rejected";
+}
+
 const Mine: React.FC = () => {
-  // 任务数据
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      title: "猫咪喂食",
-      status: "进行中",
-      type: "in-progress",
-      description: "在小区花园为流浪猫放置食物和水",
-      deadline: "2026-04-15",
-    },
-    {
-      id: 2,
-      title: "猫咪绝育",
-      status: "待处理",
-      type: "pending",
-      description: "带小区里的流浪猫去宠物医院绝育",
-      deadline: "2026-04-20",
-    },
-    {
-      id: 3,
-      title: "猫咪领养",
-      status: "已完成",
-      type: "completed",
-      description: "为流浪猫找到合适的领养家庭",
-      deadline: "2026-04-10",
-    },
-  ]);
-
-  // 领养申请数据
-  const [adoptions, setAdoptions] = useState([
-    {
-      id: 1,
-      name: "小橘",
-      date: "2026-04-01",
-      status: "pending",
-    },
-    {
-      id: 2,
-      name: "小黑",
-      date: "2026-03-15",
-      status: "approved",
-    },
-    {
-      id: 3,
-      name: "小黑",
-      date: "2026-03-15",
-      status: "rejected",
-    },
-  ]);
-
-  // 积分明细数据
-  const [pointsHistory, setPointsHistory] = useState([
-    {
-      id: 1,
-      description: "完成猫咪喂食任务",
-      change: "+10",
-      type: "positive",
-      currentPoints: "120",
-    },
-    {
-      id: 2,
-      description: "完成猫咪绝育任务",
-      change: "+15",
-      type: "positive",
-      currentPoints: "110",
-    },
-    {
-      id: 3,
-      description: "兑换领养资格",
-      change: "-50",
-      type: "negative",
-      currentPoints: "95",
-    },
-  ]);
+  const [tasks, setTasks] = useState<Task[]>([]);
+  const [adoptions, setAdoptions] = useState<Adoption[]>([]);
+  useEffect(() => {
+    setTasks([
+      {
+        id: 1,
+        title: "猫咪喂食",
+        status: "进行中",
+        type: "in-progress",
+        description: "在小区花园为流浪猫放置食物和水",
+        deadline: "2026-04-15",
+      },
+      {
+        id: 2,
+        title: "猫咪绝育",
+        status: "待处理",
+        type: "pending",
+        description: "带小区里的流浪猫去宠物医院绝育",
+        deadline: "2026-04-20",
+      },
+      {
+        id: 3,
+        title: "猫咪领养",
+        status: "已完成",
+        type: "completed",
+        description: "为流浪猫找到合适的领养家庭",
+        deadline: "2026-04-10",
+      },
+    ]);
+    setAdoptions([
+      {
+        id: 1,
+        name: "小橘",
+        date: "2026-04-01",
+        status: "pending",
+      },
+      {
+        id: 2,
+        name: "小黑",
+        date: "2026-03-15",
+        status: "approved",
+      },
+      {
+        id: 3,
+        name: "小黑",
+        date: "2026-03-15",
+        status: "rejected",
+      },
+    ]);
+  }, []);
 
   // 处理任务按钮点击
   const handleTaskAction = (taskId: number) => {

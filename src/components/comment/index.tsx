@@ -25,7 +25,6 @@ interface CommentProps {
 }
 
 const Comment: React.FC<CommentProps> = ({
-  id,
   username,
   time,
   level,

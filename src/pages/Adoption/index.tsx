@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CatAdopt from "../../components/cat_adopt";
 import "./index.scss";
 import search1 from "../../assets/icon/search1.svg";
@@ -18,72 +18,75 @@ interface CatData {
 
 const Adoption: React.FC = () => {
   // 猫咪数据
-  const [cats, setCats] = useState<CatData[]>([
-    {
-      id: "MA20260324",
-      name: "小鲁",
-      image:
-        "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20orange%20cat%20sitting%20on%20sofa&size=800x600",
-      tags: ["幼猫", "公", "已绝育", "亲人"],
-      requiredPoints: 150,
-    },
-    {
-      id: "MA20260325",
-      name: "小咪",
-      image:
-        "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20gray%20and%20white%20cat%20lying%20down&size=800x600",
-      tags: ["成年", "母", "已绝育", "温顺"],
-      requiredPoints: 80,
-    },
-    {
-      id: "MA20260326",
-      name: "小煤",
-      image:
-        "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20black%20cat%20sitting%20on%20couch&size=800x600",
-      tags: ["青年", "公", "未绝育", "活泼"],
-      requiredPoints: 200,
-    },
-    {
-      id: "MA20260327",
-      name: "花花",
-      image:
-        "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20calico%20cat%20lying%20on%20bed&size=800x600",
-      tags: ["成年", "母", "已绝育", "亲人"],
-      requiredPoints: 150,
-    },
-    {
-      id: "MA20260328",
-      name: "雪球",
-      image:
-        "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20white%20cat%20with%20blue%20eyes&size=800x600",
-      tags: ["幼猫", "母", "已绝育", "粘人"],
-      requiredPoints: 150,
-    },
-    {
-      id: "MA20260329",
-      name: "小虎",
-      image:
-        "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20tabby%20cat%20playing&size=800x600",
-      tags: ["青年", "公", "未绝育", "活泼"],
-      requiredPoints: 80,
-    },
-    {
-      id: "MA20260330",
-      name: "银儿",
-      image:
-        "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20silver%20tabby%20cat%20sleeping&size=800x600",
-      tags: ["成年", "母", "已绝育", "安静"],
-      requiredPoints: 80,
-    },
-    {
-      id: "MA20260331",
-      name: "小橘",
-      image:
-        "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20orange%20tabby%20cat%20looking%20out%20window&size=800x600",
-      tags: ["幼猫", "公", "已绝育", "有活力"],
-      requiredPoints: 200,
-    },
-  ]);
+  const [cats, setCats] = useState<CatData[]>([]);
+  useEffect(() => {
+    setCats([
+      {
+        id: "MA20260324",
+        name: "小鲁",
+        image:
+          "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20orange%20cat%20sitting%20on%20sofa&size=800x600",
+        tags: ["幼猫", "公", "已绝育", "亲人"],
+        requiredPoints: 150,
+      },
+      {
+        id: "MA20260325",
+        name: "小咪",
+        image:
+          "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20gray%20and%20white%20cat%20lying%20down&size=800x600",
+        tags: ["成年", "母", "已绝育", "温顺"],
+        requiredPoints: 80,
+      },
+      {
+        id: "MA20260326",
+        name: "小煤",
+        image:
+          "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20black%20cat%20sitting%20on%20couch&size=800x600",
+        tags: ["青年", "公", "未绝育", "活泼"],
+        requiredPoints: 200,
+      },
+      {
+        id: "MA20260327",
+        name: "花花",
+        image:
+          "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20calico%20cat%20lying%20on%20bed&size=800x600",
+        tags: ["成年", "母", "已绝育", "亲人"],
+        requiredPoints: 150,
+      },
+      {
+        id: "MA20260328",
+        name: "雪球",
+        image:
+          "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20white%20cat%20with%20blue%20eyes&size=800x600",
+        tags: ["幼猫", "母", "已绝育", "粘人"],
+        requiredPoints: 150,
+      },
+      {
+        id: "MA20260329",
+        name: "小虎",
+        image:
+          "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20tabby%20cat%20playing&size=800x600",
+        tags: ["青年", "公", "未绝育", "活泼"],
+        requiredPoints: 80,
+      },
+      {
+        id: "MA20260330",
+        name: "银儿",
+        image:
+          "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20silver%20tabby%20cat%20sleeping&size=800x600",
+        tags: ["成年", "母", "已绝育", "安静"],
+        requiredPoints: 80,
+      },
+      {
+        id: "MA20260331",
+        name: "小橘",
+        image:
+          "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20orange%20tabby%20cat%20looking%20out%20window&size=800x600",
+        tags: ["幼猫", "公", "已绝育", "有活力"],
+        requiredPoints: 200,
+      },
+    ]);
+  }, []);
 
   // 筛选状态
   const [filters, setFilters] = useState({
