@@ -1,0 +1,285 @@
+.citymap-container {
+  padding: 2rem;
+  width: 88%;
+  margin-left: 6%;
+  margin: 0 auto;
+}
+
+.citymap-page-header {
+  margin-bottom: 2rem;
+}
+
+.citymap-page-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ff6b35;
+  margin: 0 0 0.5rem 0;
+}
+
+.citymap-page-description {
+  font-size: 14px;
+  color: #666666;
+  margin: 0 0 1.5rem 0;
+}
+
+/* 筛选和统计区域 */
+.citymap-filter-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.citymap-filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.citymap-filter-label {
+  font-size: 16px;
+  color: #666666;
+  white-space: nowrap;
+}
+
+.citymap-filter-select {
+  padding: 6px 8px;
+  border: 1px solid #ff7b3c;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.citymap-filter-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.citymap-filter-button {
+  padding: 4px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: #e5e7eb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &.citymap-active {
+    background-color: #ff6b35;
+    color: #ffffff;
+    border-color: #ff6b35;
+  }
+
+  &:not(.citymap-active):hover {
+    border-color: #ff6b35;
+    color: #ff6b35;
+    background-color: #ffffff;
+  }
+}
+
+/* 数据统计区域 */
+.citymap-stats-section {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+  width: 70%;
+}
+
+.citymap-stat-card {
+  flex: 1;
+  min-width: 200px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding-left: 1.5rem;
+  height: 100px;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.citymap-stat-label {
+  font-size: 14px;
+  color: #666666;
+}
+
+.citymap-stat-value {
+  font-size: 24px;
+  font-weight: 600;
+
+  &.citymap-total {
+    color: #333333;
+  }
+
+  &.citymap-emergency {
+    color: #ff6b35;
+  }
+
+  &.citymap-adoption {
+    color: #4caf50;
+  }
+}
+
+/* 操作按钮 */
+.citymap-action-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.citymap-action-button {
+  padding: 0 16px;
+  height: 30px;
+  margin-top: 70px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  &.citymap-refresh {
+    background-color: #ff6b35;
+    color: #ffffff;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* 地图区域 */
+.citymap-map-section {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.citymap-map-container {
+  width: 100%;
+  height: 600px;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.citymap-map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 图例 */
+.citymap-legend {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+  color: #666666;
+}
+
+.citymap-legend-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.citymap-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.citymap-legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+
+  &.citymap-critical {
+    background-color: #ff0000;
+  }
+
+  &.citymap-high {
+    background-color: #ff9800;
+  }
+
+  &.citymap-medium {
+    background-color: #2196f3;
+  }
+
+  &.citymap-safe {
+    background-color: #4caf50;
+  }
+}
+
+/* 风险警告 */
+.citymap-warning-section {
+  background-color: #ef4444;
+  border-left: 4px solid #ff6b35;
+  border-radius: 0 4px 4px 0;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.citymap-warning-icon {
+  font-size: 20px;
+  color: #ff6b35;
+}
+
+.citymap-warning-content {
+  flex: 1;
+}
+
+.citymap-warning-description {
+  font-size: 13px;
+  color: white;
+  margin: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .citymap-container {
+    padding: 1rem;
+  }
+
+  .citymap-filter-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .citymap-stats-section {
+    flex-direction: column;
+  }
+
+  .citymap-map-container {
+    height: 400px;
+  }
+
+  .citymap-action-buttons {
+    flex-direction: column;
+  }
+
+  .citymap-action-button {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,590 @@
+.catsdetail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+/* 猫咪基本信息 */
+.catsdetail-basic-info {
+  display: flex;
+  gap: 4rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.catsdetail-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.catsdetail-info-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.catsdetail-cat-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333333;
+  margin: 0;
+}
+
+.catsdetail-info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.catsdetail-info-row {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.catsdetail-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 200px;
+}
+
+.catsdetail-info-label {
+  font-family: Source Han Sans;
+  font-size: 16px;
+  font-weight: normal;
+  color: #4b5563;
+  min-width: 80px;
+}
+
+.catsdetail-info-value {
+  font-family: Source Han Sans;
+  font-size: 16px;
+  font-weight: normal;
+  color: #4b5563;
+}
+
+/* 通用部分样式 */
+.catsdetail-section {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.catsdetail-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.catsdetail-section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin: 0;
+}
+
+.catsdetail-section-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ff6b35;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #ff6b35;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #ff6b35;
+    color: #ffffff;
+  }
+}
+
+/* 救助历程 */
+.catsdetail-rescue-history {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  padding-left: 2rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0.5rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #e0e0e0;
+  }
+}
+
+.catsdetail-rescue-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-bottom: 1.5rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -1.5rem;
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ff6b35;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 0 2px #ff6b35;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.catsdetail-rescue-date {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.catsdetail-rescue-operator {
+  font-size: 14px;
+  color: #666666;
+}
+
+.catsdetail-rescue-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.catsdetail-status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.catsdetail-status-original {
+  background-color: #f0f0f0;
+  color: #666666;
+}
+
+.catsdetail-status-current {
+  background-color: #e8f5e8;
+  color: #4caf50;
+}
+
+.catsdetail-status-arrow {
+  font-size: 12px;
+  color: #666666;
+}
+
+.catsdetail-rescue-description {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.4;
+}
+
+.catsdetail-status-button {
+  background-color: #ff6b35;
+  color: #ffffff;
+
+  &:hover {
+    background-color: #ff5722;
+    color: #ffffff;
+  }
+}
+
+/* 健康档案 */
+.catsdetail-health-record {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.catsdetail-health-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.catsdetail-health-subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+  margin: 0;
+}
+
+.catsdetail-vaccine-status {
+  display: flex;
+  gap: 1rem;
+}
+
+.catsdetail-vaccine-tag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.catsdetail-vaccine-done {
+  background-color: #e8f5e8;
+  color: #4caf50;
+}
+
+.catsdetail-vaccine-not-done {
+  background-color: #ffebee;
+  color: #f44336;
+}
+
+.catsdetail-nutrition-plan {
+  background-color: #fff3e0;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.catsdetail-nutrition-warning {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.catsdetail-warning-icon {
+  font-size: 16px;
+}
+
+.catsdetail-warning-text {
+  font-size: 14px;
+  color: #ff9800;
+  font-weight: 500;
+}
+
+.catsdetail-medical-records {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.catsdetail-medical-record {
+  display: grid;
+  grid-template-columns: 120px 1fr 1fr 120px;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.catsdetail-medical-date {
+  font-size: 14px;
+  color: #666666;
+  font-weight: 500;
+}
+
+.catsdetail-medical-treatment {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.catsdetail-medical-result {
+  font-size: 14px;
+  color: #666666;
+}
+
+.catsdetail-medical-hospital {
+  font-size: 14px;
+  color: #666666;
+  text-align: right;
+}
+
+/* 关联任务 */
+.catsdetail-tasks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.catsdetail-task-card {
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.catsdetail-task-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+}
+
+.catsdetail-task-urgent {
+  background-color: #ffebee;
+  &::before {
+    background-color: #f44336;
+  }
+}
+
+.catsdetail-task-normal {
+  background-color: #e3f2fd;
+  &::before {
+    background-color: #1976d2;
+  }
+}
+
+.catsdetail-task-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.catsdetail-task-icon {
+  font-size: 16px;
+}
+
+.catsdetail-task-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+  flex: 1;
+}
+
+.catsdetail-task-tag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.catsdetail-task-urgent-tag {
+  background-color: #f44336;
+  color: #ffffff;
+}
+
+.catsdetail-task-normal-tag {
+  background-color: #1976d2;
+  color: #ffffff;
+}
+
+.catsdetail-task-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.catsdetail-task-description {
+  font-size: 14px;
+  color: #666666;
+}
+
+.catsdetail-task-time {
+  font-size: 12px;
+  color: #999999;
+}
+
+/* 领养信息 */
+.catsdetail-adoption-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.catsdetail-adoption-status {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.catsdetail-adoption-status-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+  margin: 0;
+}
+
+.catsdetail-adoption-status-badge {
+  padding: 0.25rem 0rem;
+  width: 70px;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.catsdetail-adoption-status-pending {
+  background-color: #fed7aa;
+  color: #f97316;
+}
+
+.catsdetail-adoption-requirements {
+  display: flex;
+  flex-direction: column;
+}
+
+.catsdetail-adoption-requirements-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+  margin: 0 0 0.5rem 0;
+}
+
+.catsdetail-adoption-requirement-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.catsdetail-adoption-requirement-label {
+  font-size: 14px;
+  color: #666666;
+  font-weight: 500;
+}
+
+.catsdetail-adoption-requirement-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.catsdetail-adoption-requirement-description {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.4;
+}
+
+/* 小喵的故事 */
+.catsdetail-story-tabs {
+  display: flex;
+  gap: 1rem;
+}
+
+.catsdetail-story-tab {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  color: #666666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    color: #ff6b35;
+  }
+
+  &.catsdetail-story-tab-active {
+    color: #ff6b35;
+    border-bottom-color: #ff6b35;
+  }
+}
+
+.catsdetail-story-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.catsdetail-story-description {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.5;
+}
+
+.catsdetail-story-images {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.catsdetail-story-image {
+  flex: 0 0 300px;
+  height: 200px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  opacity: 0.6;
+
+  &.catsdetail-story-image-active {
+    opacity: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.catsdetail-story-indicators {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.catsdetail-story-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &.catsdetail-story-indicator-active {
+    background-color: #ff6b35;
+    width: 24px;
+    border-radius: 4px;
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .catsdetail-container {
+    padding: 1rem;
+  }
+
+  .catsdetail-basic-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .catsdetail-info-row {
+    justify-content: center;
+  }
+
+  .catsdetail-medical-record {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .catsdetail-tasks {
+    grid-template-columns: 1fr;
+  }
+
+  .catsdetail-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

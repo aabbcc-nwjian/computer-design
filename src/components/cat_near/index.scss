@@ -1,0 +1,147 @@
+.cat-near-card {
+  width: 320px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.cat-near-image-container {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.cat-near-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+
+  .cat-near-card:hover & {
+    transform: scale(1.05);
+  }
+}
+
+.cat-near-info {
+  padding: 16px;
+}
+
+.cat-near-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cat-near-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin: 0;
+}
+
+.cat-near-distance {
+  font-size: 14px;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.cat-near-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.cat-near-tag {
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+
+  &.cat-near-emergency {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    .cat-near-emergency-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+  }
+
+  &.cat-near-points {
+    padding: 4px 0px;
+  }
+
+  &.cat-near-status {
+    padding: 4px 0px;
+  }
+}
+
+.cat-near-need {
+  margin-top: 8px;
+}
+
+.cat-near-need-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  margin: 0 0 8px 0;
+}
+
+.cat-near-need-description {
+  font-size: 14px;
+  color: #666666;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+}
+
+.cat-near-deadline {
+  font-size: 14px;
+  color: #999999;
+  margin: 0;
+}
+
+.cat-near-handle-button {
+  width: 100px;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  padding: 10px;
+  background-color: #ff8521;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #ff8521;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .cat-near-card {
+    width: 100%;
+    max-width: 320px;
+  }
+}

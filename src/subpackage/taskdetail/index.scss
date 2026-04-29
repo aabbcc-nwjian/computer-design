@@ -1,0 +1,424 @@
+.taskdetail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+/* 紧急任务标题 */
+.taskdetail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.taskdetail-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #ff6b35;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin: 0;
+}
+
+.taskdetail-priority {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #ff6b35;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  margin-left: 1rem;
+  align-self: center;
+}
+
+.taskdetail-tip {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #fff3e0;
+  border: 1px solid #ffcc80;
+  border-radius: 8px;
+  padding: 1rem;
+  max-width: 300px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.taskdetail-tip-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e65100;
+  margin: 0 0 0.5rem 0;
+}
+
+.taskdetail-tip-content {
+  font-size: 12px;
+  color: #666666;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* 任务流转状态 */
+.taskdetail-process {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.taskdetail-section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin: 0 0 1.5rem 0;
+}
+
+.taskdetail-process-steps {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.taskdetail-process-steps::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #e0e0e0;
+  z-index: 1;
+}
+
+.taskdetail-process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+}
+
+.taskdetail-process-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.taskdetail-process-line {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: -50%;
+  height: 2px;
+  background-color: #e0e0e0;
+  z-index: -1;
+}
+
+.taskdetail-process-text {
+  font-size: 14px;
+  color: #666666;
+}
+
+.taskdetail-process-step-active {
+  .taskdetail-process-dot {
+    background-color: #4caf50;
+  }
+  .taskdetail-process-line {
+    background-color: #4caf50;
+  }
+  .taskdetail-process-text {
+    color: #4caf50;
+    font-weight: 500;
+  }
+}
+
+/* 猫咪信息 */
+.taskdetail-cat-info {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* 地图区域 */
+.taskdetail-map {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.taskdetail-map-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  overflow: hidden;
+  background-color: #d8d8d8;
+}
+
+.taskdetail-map-marker {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.taskdetail-map-marker-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ef5350;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.taskdetail-map-marker-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+}
+
+/* 信息网格 */
+.taskdetail-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.taskdetail-info-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.taskdetail-info-icon {
+  align-self: center;
+  margin-right: 1rem;
+}
+
+.taskdetail-info-content {
+  flex: 1;
+}
+
+.taskdetail-info-label {
+  color: #000000;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.taskdetail-info-value {
+  font-family: Source Han Sans;
+  font-size: 14px;
+  font-weight: normal;
+  color: #1f2937;
+}
+
+/* 任务描述 */
+.taskdetail-description {
+  margin-bottom: 2rem;
+}
+
+.taskdetail-description-text {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* 操作按钮 */
+.taskdetail-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 50%;
+  gap: 1rem;
+}
+
+.taskdetail-action-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 0.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #ff6b35;
+  color: #ffffff;
+  flex: 1;
+}
+
+.taskdetail-action-icon {
+  margin-right: 0.5rem;
+}
+
+.taskdetail-action-button:hover {
+  background-color: #e55a2b;
+}
+
+/* 相关任务推荐 */
+.taskdetail-recommendations {
+  margin-bottom: 2rem;
+}
+
+.taskdetail-recommendation-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.taskdetail-recommendation-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.taskdetail-recommendation-card:hover {
+  transform: translateY(-5px);
+}
+
+.taskdetail-recommendation-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: #d8d8d8;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.taskdetail-recommendation-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.taskdetail-recommendation-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+  margin: 0;
+}
+
+.taskdetail-recommendation-tag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  align-self: flex-start;
+}
+
+.taskdetail-recommendation-tag-pending {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.taskdetail-recommendation-tag-sterilization {
+  background-color: #fff3e0;
+  color: #ff9800;
+}
+
+.taskdetail-recommendation-tag-adoption {
+  background-color: #e8f5e8;
+  color: #4caf50;
+}
+
+.taskdetail-recommendation-description {
+  font-size: 14px;
+  color: #4b5563;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.taskdetail-recommendation-reward {
+  font-size: 16px;
+  font-weight: 500;
+  color: #f97316;
+  margin-top: 0.5rem;
+}
+
+.taskdetail-recommendation-button {
+  padding: 0.25rem 1.25rem;
+  background-color: #ff6b35;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+
+  &:hover {
+    background-color: #ff5722;
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .taskdetail-container {
+    padding: 1rem;
+  }
+
+  .taskdetail-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .taskdetail-tip {
+    position: static;
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+
+  .taskdetail-info {
+    flex-direction: column;
+  }
+
+  .taskdetail-actions {
+    flex-direction: column;
+  }
+
+  .taskdetail-action-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .taskdetail-recommendation-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .taskdetail-map-image {
+    height: 300px;
+  }
+}

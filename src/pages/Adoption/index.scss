@@ -1,0 +1,360 @@
+.adoption-container {
+  padding: 2rem;
+  width: 88%;
+  margin: 0 auto;
+}
+
+/* 页面标题和搜索区域 */
+.adoption-header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* 页面标题 */
+.adoption-page-header {
+  flex: 1;
+  min-width: 200px;
+}
+
+.adoption-page-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333333;
+  margin: 0 0 0.5rem 0;
+}
+
+.adoption-page-subtitle {
+  font-size: 14px;
+  color: #666666;
+  margin: 0;
+}
+
+/* 搜索和排序 */
+.adoption-search-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.adoption-search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.adoption-search-input {
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 1px solid #ff6b35;
+  border-radius: 20px;
+  font-size: 14px;
+  width: 350px;
+
+  &::placeholder {
+    color: #999999;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.2);
+  }
+}
+
+.adoption-refresh-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 12px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ff6b35;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #ff6b35;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.adoption-code-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #fdba74;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #fdba74;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* 筛选区域 */
+.adoption-filter-section {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.adoption-filter-row {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.adoption-filter-label {
+  width: 100px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #949599;
+  margin-right: 1rem;
+}
+
+.adoption-filter-options {
+  display: flex;
+  margin-left: -20px;
+  gap: 1rem;
+  flex: 1;
+}
+
+.adoption-filter-option {
+  font-family: Source Han Sans;
+  font-size: 16px;
+  font-weight: normal;
+  color: #3d3d3d;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+
+  &.active {
+    color: #ff6b35;
+    font-weight: 500;
+    position: relative;
+    background-color: transparent; /* 确保背景色为透明 */
+  }
+
+  &.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    height: 2px;
+    background-color: #ff6b35;
+    border-radius: 1px;
+  }
+
+  &:hover {
+    color: #ff6b35;
+  }
+}
+
+.adoption-filter-actions {
+  position: absolute;
+  margin-left: 900px;
+  margin-top: -40px;
+  display: flex;
+  gap: 1rem;
+}
+
+.adoption-filter-button {
+  padding: 4px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &.filter {
+    background-color: #ff6b35;
+    color: #ffffff;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* 猫咪卡片网格 */
+.adoption-cats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* 分页 */
+.adoption-pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.adoption-pagination-button {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: #ff6b35;
+    color: #ff6b35;
+  }
+
+  &.adoption-active {
+    background-color: #ff6b35;
+    color: #ffffff;
+    border-color: #ff6b35;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+/* 领养规则 */
+.adoption-rules-section {
+  background-color: #fff7ed;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.adoption-section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+}
+
+.adoption-rules-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.5;
+}
+
+.adoption-rule-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.adoption-rule-text {
+  flex: 1;
+}
+
+/* 温暖新家 */
+.adoption-success-stories-section {
+  margin-bottom: 2rem;
+}
+
+.adoption-stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.adoption-story-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.adoption-story-image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin-top: 1rem;
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 8px;
+  background-color: #dad7d7;
+}
+
+.adoption-story-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.adoption-story-content {
+  padding: 1.5rem;
+}
+
+.adoption-story-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  margin: 0 0 0.5rem 0;
+}
+
+.adoption-story-description {
+  font-size: 14px;
+  color: #666666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .adoption-container {
+    padding: 1rem;
+  }
+
+  .adoption-search-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .adoption-search-input {
+    width: 100%;
+  }
+
+  .adoption-filter-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .adoption-filter-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .adoption-cats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .adoption-stories-grid {
+    grid-template-columns: 1fr;
+  }
+}

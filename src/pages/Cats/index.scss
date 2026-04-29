@@ -1,0 +1,194 @@
+.cats-container {
+  padding: 2rem;
+  width: 88%;
+  margin-left: 6%;
+  margin: 0 auto;
+}
+
+/* 筛选区域 */
+.cats-filter-section {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cats-filter-row {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.cats-filter-label {
+  width: 100px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #949599;
+  margin-right: 1rem;
+}
+
+.cats-filter-options {
+  display: flex;
+  margin-left: -20px;
+  gap: 1rem;
+  flex: 1;
+}
+
+.cats-filter-option {
+  font-family: Source Han Sans;
+  font-size: 16px;
+  font-weight: normal;
+  color: #3d3d3d;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+
+  &.cats-active {
+    color: #ff6b35;
+    font-weight: 500;
+    position: relative;
+    background-color: transparent; /* 确保背景色为透明 */
+  }
+
+  &.cats-active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    height: 2px;
+    background-color: #ff6b35;
+    border-radius: 1px;
+  }
+
+  &:hover {
+    color: #ff6b35;
+  }
+}
+
+.cats-filter-actions {
+  position: absolute;
+  margin-left: 900px;
+  margin-top: -40px;
+  display: flex;
+  gap: 1rem;
+}
+
+.cats-filter-button {
+  padding: 4px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &.cats-filter {
+    background-color: #ff6b35;
+    color: #ffffff;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* 猫咪列表 */
+.cats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cats-grid > * {
+  flex: 0 0 calc(33.333% - 1.333rem);
+  margin-bottom: 2rem;
+}
+
+/* 分页 */
+.cats-pagination {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cats-pagination-button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ff6b35;
+  background-color: #ffffff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666666;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: #ff6b35;
+    color: #ff6b35;
+  }
+
+  &.cats-active {
+    background-color: #ff6b35;
+    color: #ffffff;
+    border-color: #ff6b35;
+  }
+
+  &.cats-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.cats-pagination-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.cats-pagination-ellipsis {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #666666;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .cats-container {
+    padding: 1rem;
+  }
+
+  .cats-filter-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .cats-filter-label {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .cats-filter-options {
+    flex-wrap: wrap;
+  }
+
+  .cats-grid {
+    grid-template-columns: 1fr;
+  }
+}
