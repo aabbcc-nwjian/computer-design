@@ -7,6 +7,7 @@ import mineicon4 from "../../assets/icon/mineicon4.svg";
 import cat1 from "../../assets/heads/0.png";
 import cat2 from "../../assets/heads/1.png";
 import cat3 from "../../assets/heads/2.png";
+import avatar from "../../assets/heads/0.svg";
 
 interface Task {
   id: number;
@@ -97,7 +98,7 @@ const Mine: React.FC = () => {
       {/* 顶部个人信息区域 */}
       <div className="profile-header">
         <div className="profile-info">
-          <div className="avatar">U</div>
+          <img src={avatar} className="avatar" />
           <div className="user-details">
             <div className="username">用户名</div>
             <div className="volunteer-badge">自愿者</div>

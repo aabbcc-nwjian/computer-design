@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../assets/logo/logo.svg";
 import searchIcon from "../assets/icon/search.svg";
-import img from "../assets/heads/0.png";
+import img from "../assets/heads/0.svg";
 
 const Tobline: React.FC = () => {
   return (
@@ -148,9 +148,10 @@ const Tobline: React.FC = () => {
                 justifyContent: "center",
                 color: "#666",
                 fontWeight: "bold",
+                overflow: "hidden",
               }}
             >
-              <img src={img} />
+              <img src={img} style={{ width: "100%" }} />
             </div>
             <div>
               <div

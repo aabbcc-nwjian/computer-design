@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./index.scss";
 import icon1 from "../../assets/citymap/icon1.svg";
 import icon2 from "../../assets/citymap/icon2.svg";
-import map from "../../assets/images/map.png";
+import map from "../../assets/images/citymap.svg";
 
 const Citymap: React.FC = () => {
   // 筛选状态
@@ -217,11 +217,15 @@ const Citymap: React.FC = () => {
       <div className="citymap-map-section">
         <div className="citymap-map-container">
           {/* 使用 img 组件代替地图 */}
-          <img src={map} className="citymap-map-image" />
+          <img
+            src={map}
+            className="citymap-map-image"
+            style={{ objectPosition: "bottom" }}
+          />
         </div>
 
         {/* 图例 */}
-        <div className="citymap-legend">
+        {/* <div className="citymap-legend">
           <div className="citymap-legend-title">图例</div>
           <div className="citymap-legend-item">
             <div className="citymap-legend-dot citymap-critical"></div>
@@ -239,7 +243,7 @@ const Citymap: React.FC = () => {
             <div className="citymap-legend-dot citymap-safe"></div>
             <span>安全(状况良好)</span>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* 风险警告 */}
