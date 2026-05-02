@@ -5,6 +5,12 @@ import left1 from "../../assets/icon/left1.svg";
 import left2 from "../../assets/icon/left2.svg";
 import right1 from "../../assets/icon/right1.svg";
 import right2 from "../../assets/icon/right2.svg";
+import cat1 from "../../assets/cats/16.png";
+import cat2 from "../../assets/cats/17.png";
+import cat3 from "../../assets/cats/1.png";
+import cat4 from "../../assets/cats/19.png";
+import cat5 from "../../assets/cats/20.png";
+import cat6 from "../../assets/cats/21.png";
 
 // 猫咪数据
 const catsData = [
@@ -13,8 +19,7 @@ const catsData = [
     colorid: 0,
     name: "小橘",
     distance: "距离您200m",
-    image:
-      "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20orange%20kitten%20with%20blue%20eyes&size=800x600",
+    image: cat3,
     isEmergency: true,
     difficulty: "lv3",
     points: 20,
@@ -28,8 +33,7 @@ const catsData = [
     colorid: 1,
     name: "小黑",
     distance: "距离您500m",
-    image:
-      "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20black%20kitten%20with%20green%20eyes&size=800x600",
+    image: cat1,
     isEmergency: true,
     difficulty: "lv2",
     points: 15,
@@ -43,8 +47,7 @@ const catsData = [
     colorid: 2,
     name: "小白",
     distance: "距离您800m",
-    image:
-      "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20white%20kitten%20with%20yellow%20eyes&size=800x600",
+    image: cat2,
     isEmergency: true,
     difficulty: "lv4",
     points: 25,
@@ -56,25 +59,23 @@ const catsData = [
   {
     id: 1,
     colorid: 0,
-    name: "小橘",
-    distance: "距离您200m",
-    image:
-      "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20orange%20kitten%20with%20blue%20eyes&size=800x600",
+    name: "布丁",
+    distance: "距离您230m",
+    image: cat4,
     isEmergency: true,
     difficulty: "lv3",
     points: 20,
     status: "待处理",
     need: "救助需求",
-    description: "前腿受伤，需要紧急救助",
+    description: "后腿受伤，需要紧急救助",
     deadline: "2026-03-22",
   },
   {
     id: 2,
     colorid: 1,
-    name: "小黑",
-    distance: "距离您500m",
-    image:
-      "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20black%20kitten%20with%20green%20eyes&size=800x600",
+    name: "安安",
+    distance: "距离您650m",
+    image: cat5,
     isEmergency: true,
     difficulty: "lv2",
     points: 15,
@@ -86,16 +87,15 @@ const catsData = [
   {
     id: 3,
     colorid: 2,
-    name: "小白",
-    distance: "距离您800m",
-    image:
-      "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20white%20kitten%20with%20yellow%20eyes&size=800x600",
+    name: "团子",
+    distance: "距离您700m",
+    image: cat6,
     isEmergency: true,
     difficulty: "lv4",
     points: 25,
     status: "待处理",
     need: "医疗救助",
-    description: "严重脱水，需要紧急治疗",
+    description: "需要治疗",
     deadline: "2026-03-20",
   },
 ];

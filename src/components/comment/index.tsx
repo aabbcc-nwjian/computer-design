@@ -3,6 +3,9 @@ import "./index.scss";
 import shareIcon from "../../assets/icon/share.svg";
 import likeIcon from "../../assets/icon/like.svg";
 import commentIcon from "../../assets/icon/comment.svg";
+import avatar0 from "../../assets/heads/0.png";
+import avatar1 from "../../assets/heads/1.png";
+import avatar2 from "../../assets/heads/2.png";
 
 interface CommentProps {
   id: string;
@@ -25,6 +28,7 @@ interface CommentProps {
 }
 
 const Comment: React.FC<CommentProps> = ({
+  id,
   username,
   time,
   level,
@@ -42,7 +46,12 @@ const Comment: React.FC<CommentProps> = ({
     <div className="comment-card">
       {/* 用户信息 */}
       <div className="comment-header">
-        <div className="comment-avatar"></div>
+        <div className="comment-avatar">
+          <img
+            src={id === "1" ? avatar1 : id === "2" ? avatar2 : avatar0}
+            alt=""
+          />
+        </div>
         <div className="comment-user-info">
           <div className="comment-user-details">
             <div className="comment-username">{username}</div>

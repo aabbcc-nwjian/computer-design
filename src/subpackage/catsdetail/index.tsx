@@ -5,6 +5,9 @@ import cats1 from "../../assets/icon/cats1.svg";
 import cats2 from "../../assets/icon/cats2.svg";
 import cats3 from "../../assets/icon/cats3.svg";
 import cats4 from "../../assets/icon/cats4.svg";
+import commenting1 from "../../assets/cats/22.png";
+import commenting2 from "../../assets/cats/23.png";
+import commenting3 from "../../assets/cats/24.png";
 
 const commentData = [
   {
@@ -13,11 +16,7 @@ const commentData = [
     time: "刚刚",
     level: "救助达人 LV.5",
     content: "成功领养了小橙！它现在在家里非常开心，感谢救助团队的辛苦付出！",
-    images: [
-      "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20orange%20kitten%20at%20home&size=800x600",
-      "https://neeko-copilot.bytedance.net/api/text2image?prompt=kitten%20playing%20with%20toy&size=800x600",
-      "https://neeko-copilot.bytedance.net/api/text2image?prompt=kitten%20sleeping%20on%20bed&size=800x600",
-    ],
+    images: [commenting1, commenting2, commenting3],
     likes: 50,
     comments: 50,
     shares: 50,
@@ -31,10 +30,7 @@ const CatsDetail: React.FC = () => {
       {/* 猫咪基本信息 */}
       <div className="catsdetail-basic-info">
         <div className="catsdetail-avatar">
-          <img
-            src="https://neeko-copilot.bytedance.net/api/text2image?prompt=orange%20kitten%20on%20bed&size=800x600"
-            alt="小橙"
-          />
+          <img src={commenting1} alt="小橙" />
         </div>
         <div className="catsdetail-info-content">
           <div className="catsdetail-info-grid">
@@ -105,6 +101,7 @@ const CatsDetail: React.FC = () => {
             变更状态
           </button>
         </div>
+        {/* <img src={pic1} /> */}
         <div className="catsdetail-rescue-history">
           <div className="catsdetail-rescue-item">
             <div className="catsdetail-rescue-date">2026-03-22 14:30</div>

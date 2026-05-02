@@ -10,6 +10,11 @@ import icon6 from "../../assets/taskdetail/icon6.svg";
 import icon7 from "../../assets/taskdetail/icon7.svg";
 import icon8 from "../../assets/taskdetail/icon8.svg";
 import icon9 from "../../assets/taskdetail/icon9.svg";
+import avatar1 from "../../assets/heads/3.png";
+import avatar2 from "../../assets/heads/4.png";
+import avatar3 from "../../assets/heads/5.png";
+import avatar4 from "../../assets/cats/1.png";
+import map from "../../assets/images/map1.png";
 
 const TaskDetail: React.FC = () => {
   return (
@@ -70,13 +75,14 @@ const TaskDetail: React.FC = () => {
           }}
         >
           <img
-            src="https://neeko-copilot.bytedance.net/api/text2image?prompt=cat%20avatar&size=200x200"
+            src={avatar4}
             alt="猫咪头像"
             style={{
               width: "75px",
               height: "75px",
               borderRadius: "50%",
               backgroundColor: "#d8d8d8",
+              objectFit: "cover",
             }}
           />
           <div style={{ marginLeft: "1rem" }}>
@@ -120,11 +126,7 @@ const TaskDetail: React.FC = () => {
         </div>
         {/* 地图 */}
         <div className="taskdetail-map">
-          <img
-            src="https://neeko-copilot.bytedance.net/api/text2image?prompt=map%20view%20street%20neighborhood%20area%20overview&size=1200x300"
-            alt="猫咪位置"
-            className="taskdetail-map-image"
-          />
+          <img src={map} alt="猫咪位置" className="taskdetail-map-image" />
           <div className="taskdetail-map-marker">
             <span className="taskdetail-map-marker-dot"></span>
             <span className="taskdetail-map-marker-text">猫咪位置</span>
@@ -236,7 +238,7 @@ const TaskDetail: React.FC = () => {
               }}
             >
               <img
-                src=""
+                src={avatar1}
                 style={{
                   width: 60,
                   height: 60,
@@ -247,7 +249,7 @@ const TaskDetail: React.FC = () => {
                 }}
               />
               <div>
-                <div style={{ marginBottom: "0.5rem" }}>小黑</div>
+                <div style={{ marginBottom: "0.5rem" }}>小喵</div>
                 <div className="taskdetail-recommendation-tag taskdetail-recommendation-tag-pending">
                   待投喂
                 </div>
@@ -277,7 +279,7 @@ const TaskDetail: React.FC = () => {
               }}
             >
               <img
-                src=""
+                src={avatar2}
                 style={{
                   width: 60,
                   height: 60,
@@ -318,7 +320,7 @@ const TaskDetail: React.FC = () => {
               }}
             >
               <img
-                src=""
+                src={avatar3}
                 style={{
                   width: 60,
                   height: 60,

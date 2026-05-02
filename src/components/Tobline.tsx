@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../assets/logo/logo.svg";
 import searchIcon from "../assets/icon/search.svg";
+import img from "../assets/heads/0.png";
 
 const Tobline: React.FC = () => {
   return (
@@ -149,7 +150,7 @@ const Tobline: React.FC = () => {
                 fontWeight: "bold",
               }}
             >
-              U
+              <img src={img} />
             </div>
             <div>
               <div

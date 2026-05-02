@@ -4,6 +4,9 @@ import mineicon1 from "../../assets/icon/mineicon1.svg";
 import mineicon2 from "../../assets/icon/mineicon2.svg";
 import mineicon3 from "../../assets/icon/mineicon3.svg";
 import mineicon4 from "../../assets/icon/mineicon4.svg";
+import cat1 from "../../assets/heads/0.png";
+import cat2 from "../../assets/heads/1.png";
+import cat3 from "../../assets/heads/2.png";
 
 interface Task {
   id: number;
@@ -19,6 +22,7 @@ interface Adoption {
   name: string;
   date?: string;
   status: "pending" | "approved" | "rejected";
+  img: string;
 }
 
 const Mine: React.FC = () => {
@@ -54,21 +58,24 @@ const Mine: React.FC = () => {
     setAdoptions([
       {
         id: 1,
-        name: "小橘",
+        name: "橘子",
         date: "2026-04-01",
         status: "pending",
+        img: cat1,
       },
       {
         id: 2,
-        name: "小黑",
+        name: "小白",
         date: "2026-03-15",
         status: "approved",
+        img: cat2,
       },
       {
         id: 3,
-        name: "小黑",
+        name: "灰灰",
         date: "2026-03-15",
         status: "rejected",
+        img: cat3,
       },
     ]);
   }, []);
@@ -171,7 +178,9 @@ const Mine: React.FC = () => {
           {adoptions.map((adoption) => (
             <div key={adoption.id} className="adoption-item">
               <div className="adoption-info">
-                <div className="adoption-avatar">{adoption.name.charAt(0)}</div>
+                <div className="adoption-avatar">
+                  <img src={adoption.img} alt={adoption.name} />
+                </div>
                 <div className="adoption-details">
                   <div className="adoption-name">{adoption.name}</div>
                   <div className="adoption-date">申请时间: {adoption.date}</div>

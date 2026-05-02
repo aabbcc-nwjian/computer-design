@@ -3,16 +3,24 @@ import CatCardWait from "../../components/cat_wait";
 import CatCardNear from "../../components/cat_near";
 import Comment from "../../components/comment";
 import "./index.scss";
+import cat1 from "../../assets/cats/1.png";
+import cat2 from "../../assets/cats/2.png";
+import cat3 from "../../assets/cats/3.png";
+import c1 from "../../assets/cats/cat1.png";
+import c2 from "../../assets/cats/cat2.png";
+import c3 from "../../assets/cats/cat3.png";
+import commenting1 from "../../assets/cats/22.png";
+import commenting2 from "../../assets/cats/23.png";
+import commenting3 from "../../assets/cats/24.png";
 
 const catData = [
   {
     id: 1,
-    name: "小橘",
+    name: "小鲁",
     gender: "雄性",
     age: "6个月",
     breed: "橘猫",
-    image:
-      "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20orange%20kitten%20with%20blue%20eyes&size=800x600",
+    image: cat1,
     status: "绝育后放归",
     statusType: "sterilized" as const,
     personalityTags: ["野性", "已绝育", "独立"],
@@ -20,12 +28,11 @@ const catData = [
   },
   {
     id: 2,
-    name: "小黑",
+    name: "小雨",
     gender: "雌性",
     age: "1岁",
     breed: "黑猫",
-    image:
-      "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20black%20kitten%20with%20green%20eyes&size=800x600",
+    image: cat2,
     status: "等待领养人",
     statusType: "waiting" as const,
     personalityTags: ["野性", "已绝育", "独立"],
@@ -33,12 +40,11 @@ const catData = [
   },
   {
     id: 3,
-    name: "小白",
+    name: "小博",
     gender: "雄性",
     age: "8个月",
     breed: "白猫",
-    image:
-      "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20white%20kitten%20with%20yellow%20eyes&size=800x600",
+    image: cat3,
     status: "治疗中",
     statusType: "treatment" as const,
     personalityTags: ["野性", "已绝育", "独立"],
@@ -51,8 +57,7 @@ const datData1 = [
     colorid: 0,
     name: "小橘",
     distance: "距离您200m",
-    image:
-      "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20orange%20kitten%20with%20blue%20eyes&size=800x600",
+    image: c1,
     isEmergency: true,
     difficulty: "lv3",
     points: 20,
@@ -66,8 +71,7 @@ const datData1 = [
     colorid: 1,
     name: "小黑",
     distance: "距离您500m",
-    image:
-      "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20black%20kitten%20with%20green%20eyes&size=800x600",
+    image: c2,
     isEmergency: true,
     difficulty: "lv2",
     points: 15,
@@ -81,8 +85,7 @@ const datData1 = [
     colorid: 2,
     name: "小白",
     distance: "距离您800m",
-    image:
-      "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20white%20kitten%20with%20yellow%20eyes&size=800x600",
+    image: c3,
     isEmergency: true,
     difficulty: "lv4",
     points: 25,
@@ -99,11 +102,7 @@ const commentData = [
     time: "刚刚",
     level: "救助达人 LV.5",
     content: "成功领养了小橙！它现在在家里非常开心，感谢救助团队的辛苦付出！",
-    images: [
-      "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20orange%20kitten%20at%20home&size=800x600",
-      "https://neeko-copilot.bytedance.net/api/text2image?prompt=kitten%20playing%20with%20toy&size=800x600",
-      "https://neeko-copilot.bytedance.net/api/text2image?prompt=kitten%20sleeping%20on%20bed&size=800x600",
-    ],
+    images: [commenting1, commenting2, commenting3],
     likes: 50,
     comments: 50,
     shares: 50,
@@ -175,7 +174,7 @@ const Home: React.FC = () => {
     <div className="home-container">
       <div className="section-header">
         <h2 className="section-title">附近急需帮助</h2>
-        <a href="#" className="view-more">
+        <a href="/task-center" className="view-more">
           查看更多救助任务
         </a>
       </div>
@@ -200,7 +199,7 @@ const Home: React.FC = () => {
       </div>
       <div className="section-header">
         <h2 className="section-title">等待回家的毛孩子</h2>
-        <a href="#" className="view-more">
+        <a href="/adoption" className="view-more">
           查看更多领养
         </a>
       </div>

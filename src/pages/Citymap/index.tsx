@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./index.scss";
 import icon1 from "../../assets/citymap/icon1.svg";
 import icon2 from "../../assets/citymap/icon2.svg";
+import map from "../../assets/images/map.png";
 
 const Citymap: React.FC = () => {
   // 筛选状态
@@ -216,11 +217,7 @@ const Citymap: React.FC = () => {
       <div className="citymap-map-section">
         <div className="citymap-map-container">
           {/* 使用 img 组件代替地图 */}
-          <img
-            src="https://neeko-copilot.bytedance.net/api/text2image?prompt=city%20map%20with%20heat%20map%20markers&size=1200x600"
-            alt="城市流浪猫热力图"
-            className="citymap-map-image"
-          />
+          <img src={map} className="citymap-map-image" />
         </div>
 
         {/* 图例 */}

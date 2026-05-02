@@ -5,6 +5,12 @@ import left1 from "../../assets/icon/left1.svg";
 import left2 from "../../assets/icon/left2.svg";
 import right1 from "../../assets/icon/right1.svg";
 import right2 from "../../assets/icon/right2.svg";
+import cat1 from "../../assets/cats/22.png";
+import cat2 from "../../assets/cats/11.png";
+import cat3 from "../../assets/cats/12.png";
+import cat4 from "../../assets/cats/13.png";
+import cat5 from "../../assets/cats/14.png";
+import cat6 from "../../assets/cats/15.png";
 
 // 猫咪数据
 const catsData = [
@@ -14,8 +20,7 @@ const catsData = [
     gender: "雄性",
     age: "1.5年",
     breed: "黑猫",
-    image:
-      "https://neeko-copilot.bytedance.net/api/text2image?prompt=black%20cat%20with%20yellow%20eyes&size=800x600",
+    image: cat2,
     status: "绝育后放归",
     statusType: "sterilized" as const,
     personalityTags: ["野性", "已绝育", "独立"],
@@ -23,68 +28,64 @@ const catsData = [
   },
   {
     id: 2,
-    name: "夜鹰",
-    gender: "雄性",
-    age: "1.5年",
-    breed: "黑猫",
-    image:
-      "https://neeko-copilot.bytedance.net/api/text2image?prompt=black%20cat%20with%20yellow%20eyes&size=800x600",
+    name: "小橙",
+    gender: "雌性",
+    age: "2年",
+    breed: "橘猫",
+    image: cat1,
     status: "治疗中",
     statusType: "treatment" as const,
-    personalityTags: ["野性", "已绝育", "独立"],
-    description: "性格独立，适应户外生活，适合有固定区域照顾的环境哈哈哈哈",
+    personalityTags: ["亲人", "贪吃", "活泼"],
+    description: "圆滚滚的橘猫，性格温顺粘人，喜欢被抚摸",
   },
   {
     id: 3,
-    name: "夜鹰",
+    name: "雪球",
     gender: "雄性",
-    age: "1.5年",
-    breed: "黑猫",
-    image:
-      "https://neeko-copilot.bytedance.net/api/text2image?prompt=black%20cat%20with%20yellow%20eyes&size=800x600",
+    age: "1年",
+    breed: "白猫",
+    image: cat3,
     status: "等待领养人",
     statusType: "waiting" as const,
-    personalityTags: ["野性", "已绝育", "独立"],
-    description: "性格独立，适应户外生活，适合有固定区域照顾的环境哈哈哈哈",
+    personalityTags: ["安静", "优雅", "傲娇"],
+    description: "性格优雅傲娇，适合安静的家庭环境。",
   },
   {
     id: 4,
-    name: "夜鹰",
-    gender: "雄性",
-    age: "1.5年",
-    breed: "黑猫",
-    image:
-      "https://neeko-copilot.bytedance.net/api/text2image?prompt=black%20cat%20with%20yellow%20eyes&size=800x600",
+    name: "花花",
+    gender: "雌性",
+    age: "3年",
+    breed: "花猫",
+    image: cat4,
     status: "绝育后放归",
     statusType: "sterilized" as const,
-    personalityTags: ["野性", "已绝育", "独立"],
-    description: "性格独立，适应户外生活，适合有固定区域照顾的环境哈哈哈哈",
+    personalityTags: ["聪明", "警觉", "护崽"],
+    description: "毛色分布独特美丽,性格聪明警觉，适合有经验的养猫人。",
   },
   {
     id: 5,
-    name: "夜鹰",
+    name: "虎斑",
     gender: "雄性",
-    age: "1.5年",
-    breed: "黑猫",
-    image:
-      "https://neeko-copilot.bytedance.net/api/text2image?prompt=black%20cat%20with%20yellow%20eyes&size=800x600",
+    age: "8个月",
+    breed: "花猫",
+    image: cat5,
     status: "治疗中",
     statusType: "treatment" as const,
-    personalityTags: ["野性", "已绝育", "独立"],
-    description: "性格独立，适应户外生活，适合有固定区域照顾的环境哈哈哈哈",
+    personalityTags: ["好动", "好奇", "友善"],
+    description:
+      "精力充沛的小狸花，对一切事物都充满好奇,是个活泼可爱的小家伙。",
   },
   {
     id: 6,
-    name: "夜鹰",
-    gender: "雄性",
-    age: "1.5年",
-    breed: "黑猫",
-    image:
-      "https://neeko-copilot.bytedance.net/api/text2image?prompt=black%20cat%20with%20yellow%20eyes&size=800x600",
+    name: "奶茶",
+    gender: "雌性",
+    age: "6个月",
+    breed: "花猫",
+    image: cat6,
     status: "等待领养人",
     statusType: "waiting" as const,
-    personalityTags: ["野性", "已绝育", "独立"],
-    description: "性格独立，适应户外生活，适合有固定区域照顾的环境哈哈哈哈",
+    personalityTags: ["话痨", "粘人", "聪明"],
+    description: "有着深邃的蓝色眼睛和优雅的身姿,非常喜欢与人互动交流.",
   },
 ];
 

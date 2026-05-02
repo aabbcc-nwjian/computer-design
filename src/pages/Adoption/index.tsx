@@ -7,6 +7,21 @@ import search3 from "../../assets/icon/search3.svg";
 import icon1 from "../../assets/icon/icon1.svg";
 import icon2 from "../../assets/icon/icon2.svg";
 import icon3 from "../../assets/icon/icon3.svg";
+import img1 from "../../assets/images/img1.png";
+import img2 from "../../assets/images/img2.png";
+import img3 from "../../assets/images/img3.png";
+import cat1 from "../../assets/cats/1.png";
+import cat2 from "../../assets/cats/2.png";
+import cat3 from "../../assets/cats/3.png";
+import cat4 from "../../assets/cats/4.png";
+import cat5 from "../../assets/cats/5.png";
+import cat6 from "../../assets/cats/6.png";
+import cat7 from "../../assets/cats/7.png";
+import cat8 from "../../assets/cats/8.png";
+import left1 from "../../assets/icon/left1.svg";
+import left2 from "../../assets/icon/left2.svg";
+import right1 from "../../assets/icon/right1.svg";
+import right2 from "../../assets/icon/right2.svg";
 
 interface CatData {
   id: string;
@@ -24,64 +39,56 @@ const Adoption: React.FC = () => {
       {
         id: "MA20260324",
         name: "小鲁",
-        image:
-          "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20orange%20cat%20sitting%20on%20sofa&size=800x600",
+        image: cat1,
         tags: ["幼猫", "公", "已绝育", "亲人"],
         requiredPoints: 150,
       },
       {
         id: "MA20260325",
-        name: "小咪",
-        image:
-          "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20gray%20and%20white%20cat%20lying%20down&size=800x600",
+        name: "小雨",
+        image: cat2,
         tags: ["成年", "母", "已绝育", "温顺"],
         requiredPoints: 80,
       },
       {
         id: "MA20260326",
-        name: "小煤",
-        image:
-          "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20black%20cat%20sitting%20on%20couch&size=800x600",
+        name: "小博",
+        image: cat3,
         tags: ["青年", "公", "未绝育", "活泼"],
         requiredPoints: 200,
       },
       {
         id: "MA20260327",
         name: "花花",
-        image:
-          "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20calico%20cat%20lying%20on%20bed&size=800x600",
+        image: cat4,
         tags: ["成年", "母", "已绝育", "亲人"],
         requiredPoints: 150,
       },
       {
         id: "MA20260328",
         name: "雪球",
-        image:
-          "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20white%20cat%20with%20blue%20eyes&size=800x600",
+        image: cat5,
         tags: ["幼猫", "母", "已绝育", "粘人"],
         requiredPoints: 150,
       },
       {
         id: "MA20260329",
         name: "小虎",
-        image:
-          "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20tabby%20cat%20playing&size=800x600",
+        image: cat6,
         tags: ["青年", "公", "未绝育", "活泼"],
         requiredPoints: 80,
       },
       {
         id: "MA20260330",
         name: "银儿",
-        image:
-          "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20silver%20tabby%20cat%20sleeping&size=800x600",
+        image: cat7,
         tags: ["成年", "母", "已绝育", "安静"],
         requiredPoints: 80,
       },
       {
         id: "MA20260331",
         name: "小橘",
-        image:
-          "https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20orange%20tabby%20cat%20looking%20out%20window&size=800x600",
+        image: cat8,
         tags: ["幼猫", "公", "已绝育", "有活力"],
         requiredPoints: 200,
       },
@@ -398,14 +405,14 @@ const Adoption: React.FC = () => {
           onClick={() => handlePageChange(1)}
           disabled={currentPage === 1}
         >
-          «
+          <img src={left2} />
         </button>
         <button
           className="adoption-pagination-button"
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
-          /
+          <img src={left1} />
         </button>
         {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
           let pageNumber: number;
@@ -438,14 +445,14 @@ const Adoption: React.FC = () => {
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
         >
-          /
+          <img src={right1} />
         </button>
         <button
           className="adoption-pagination-button"
           onClick={() => handlePageChange(totalPages)}
           disabled={currentPage === totalPages}
         >
-          »
+          <img src={right2} />
         </button>
       </div>
 
@@ -488,11 +495,7 @@ const Adoption: React.FC = () => {
         <div className="adoption-stories-grid">
           <div className="adoption-story-card">
             <div className="adoption-story-image-container">
-              <img
-                src="https://neeko-copilot.bytedance.net/api/text2image?prompt=happy%20family%20with%20cat&size=800x600"
-                alt="橘子的幸福日常"
-                className="story-image"
-              />
+              <img src={img1} alt="橘子的幸福日常" className="story-image" />
             </div>
             <div className="adoption-story-content">
               <h3 className="adoption-story-title">橘子的幸福日常</h3>
@@ -504,7 +507,7 @@ const Adoption: React.FC = () => {
           <div className="adoption-story-card">
             <div className="adoption-story-image-container">
               <img
-                src="https://neeko-copilot.bytedance.net/api/text2image?prompt=woman%20playing%20with%20cat&size=800x600"
+                src={img2}
                 alt="奶茶的温柔时光"
                 className="adoption-story-image"
               />
@@ -519,7 +522,7 @@ const Adoption: React.FC = () => {
           <div className="adoption-story-card">
             <div className="adoption-story-image-container">
               <img
-                src="https://neeko-copilot.bytedance.net/api/text2image?prompt=child%20playing%20with%20two%20cats&size=800x600"
+                src={img3}
                 alt="双猫的欢乐世界"
                 className="adoption-story-image"
               />
